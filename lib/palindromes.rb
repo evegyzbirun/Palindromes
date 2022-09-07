@@ -6,7 +6,6 @@ class Palindrome
 
   def is_palindrome?
     string_remove = @word.gsub(/[^A-Za-z0-9]/, '').downcase
-    puts string_remove
 
     split_array = string_remove.split(//)
     new_array = []
@@ -16,10 +15,10 @@ class Palindrome
       i -= 1
     end
     if (split_array == new_array)
-      puts "YOU GOT IT MY GREAT FRIEND!"
+      # puts "YOU GOT IT MY GREAT FRIEND!"
       return true
     else 
-      puts "HEY NOOOOOOOOOO THAT'S NOT IT!"
+      # puts "HEY NOOOOOOOOOO THAT'S NOT IT!"
       return false
     end
   end
