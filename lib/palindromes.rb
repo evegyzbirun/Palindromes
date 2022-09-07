@@ -3,10 +3,8 @@ class Palindrome
   def initialize(word)
     @word = word
   end
-
   def is_palindrome?
     string_remove = @word.gsub(/[^A-Za-z0-9]/, '').downcase
-
     split_array = string_remove.split(//)
     new_array = []
     i = -1
@@ -15,10 +13,8 @@ class Palindrome
       i -= 1
     end
     if (split_array == new_array)
-      # puts "YOU GOT IT MY GREAT FRIEND!"
       return true
-    else 
-      # puts "HEY NOOOOOOOOOO THAT'S NOT IT!"
+    else
       return false
     end
   end
