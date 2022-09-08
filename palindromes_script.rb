@@ -3,7 +3,7 @@ require 'pry'
 require ('./lib/palindromes.rb')
 
 file_data = File.read("./palindrome.txt").split
-
+binding.pry
 palendrome_array = []
 file_data.each do |n|
 pal_check_array = n.to_s.split(" ")

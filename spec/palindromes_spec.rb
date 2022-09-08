@@ -1,15 +1,19 @@
 require 'rspec'
-require ('./lib/palindroms.rb')
+require ('./lib/palindromes.rb')
 
 
 describe('#is_palindrome?') do
   it("is it palindrome?") do
-    test_subject = 131
-    expect(test_subject.is_palindrome?().to(eq("true")))
+    test_subject = "dood"
+    my_pal = Palindrome.new(test_subject)
+    expect(my_pal.is_palindrome?).to(eq(true))
   end 
+end
 
-  # it("is it palindrom?") do
-  #   test_subject = 131
-  #   expect(test_subject.is_palendrome?().to(eq("true")))
-  # end 
+describe('#is_palindrome?') do
+  it("is it palindrome?") do
+    test_subject = "dtod"
+    my_pal = Palindrome.new(test_subject)
+    expect(my_pal.is_palindrome?).to(eq(false))
+  end 
 end
